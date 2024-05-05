@@ -1,0 +1,98 @@
+/* start layout */
+.d-flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.d-grid {
+  display: grid;
+}
+/* end layout */
+
+/* start color */
+.c-black {
+  color: black;
+}
+.bg-white {
+  background-color: #fff;
+}
+/* end color */
+
+/* start spacing */
+.p-20 {
+  padding: calc(20rem / 16);
+}
+.px-20 {
+  padding: 0 calc(20rem / 16);
+}
+.py-20 {
+  padding: calc(20rem / 16) 0;
+}
+.p-10 {
+  padding: calc(10rem / 16);
+}
+.px-10 {
+  padding: 0 calc(10rem / 16);
+}
+.py-10 {
+  padding: calc(10rem / 16) 0;
+}
+.m-20 {
+  margin: calc(20rem / 16);
+}
+.mx-20 {
+  margin: 0 calc(20rem / 16);
+}
+.my-20 {
+  margin: calc(20rem / 16) 0;
+}
+.m-10 {
+  margin: calc(10rem / 16);
+}
+.mx-10 {
+  margin: 0 calc(10rem / 16);
+}
+.my-10 {
+  margin: calc(10rem / 16) 0;
+}
+/* end spacing */
+
+/* start font */
+.f-20 {
+  font-size: calc(20rem / 16);
+}
+.t-center {
+  text-align: center;
+}
+/* end font */
+
+/* start position */
+.p-relative {
+  position: relative;
+}
+/* end position */
+
+/* start border */
+.br-6 {
+  border-radius: calc(6rem / 16);
+}
+.br-50 {
+  border-radius: 50%;
+}
+/* end border */
+
+/* start media */
+
+/* end media */
+
+/* start components */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* end components */

@@ -1,4 +1,12 @@
 /* rest css */
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
+}
 * {
   box-sizing: border-box;
 }
@@ -10,6 +18,8 @@ html {
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  display: flex;
+  background-color: #f1f5f9;
 }
 a {
   text-decoration: none;
@@ -24,3 +34,24 @@ video {
   width: 100%;
 }
 /* end reset */
+
+/* start styling aside */
+aside {
+  width: calc(250rem / 16);
+  min-height: 100vh;
+  box-shadow: 0 0 10px #ddd;
+}
+aside li {
+  margin-bottom: calc(5rem / 16);
+  transition: 0.3s;
+}
+aside a {
+  display: flex;
+  align-items: flex-end;
+  gap: calc(10rem / 16);
+}
+aside li:hover,
+.active {
+  background-color: #f6f6f6;
+  border-radius: calc(6rem / 16);
+}
