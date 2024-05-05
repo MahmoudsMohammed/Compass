@@ -41,17 +41,108 @@ aside {
   min-height: 100vh;
   box-shadow: 0 0 10px #ddd;
 }
+@media (max-width: calc(767rem / 16)) {
+  aside {
+    width: calc(80rem / 16);
+  }
+}
+aside h2 {
+  margin-bottom: calc(50rem / 16);
+  position: relative;
+  font-size: clamp(calc(12rem / 16), 2vw, calc(20rem / 16));
+}
+aside h2::after,
+aside h2::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  left: 50%;
+  transform: translateX(-50%);
+}
+aside h2::after {
+  width: calc(80rem / 16);
+  height: calc(2rem / 16);
+  bottom: calc(-20rem / 16);
+}
+aside h2::before {
+  width: calc(15rem / 16);
+  height: calc(15rem / 16);
+  border-radius: 50%;
+  border: 5px solid white;
+  bottom: calc(-30rem / 16);
+}
+@media (max-width: calc(767rem / 16)) {
+  aside h2 {
+    margin-bottom: calc(20rem / 16);
+  }
+  aside h2::after,
+  aside h2::before {
+    display: none;
+  }
+}
+aside ul {
+  display: flex;
+  flex-direction: column;
+  gap: calc(5rem / 16);
+}
+@media (max-width: calc(767rem / 16)) {
+  aside ul {
+    align-items: center;
+  }
+}
 aside li {
-  margin-bottom: calc(5rem / 16);
   transition: 0.3s;
 }
 aside a {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: calc(10rem / 16);
+}
+@media (max-width: calc(767rem / 16)) {
+  aside a span {
+    display: none;
+  }
 }
 aside li:hover,
 .active {
   background-color: #f6f6f6;
   border-radius: calc(6rem / 16);
 }
+/* finish the aside */
+
+/* start header */
+.content {
+  flex: 1;
+}
+header {
+}
+header .search {
+  border: 1px solid #ddd;
+  padding: calc(7rem / 16) calc(10rem / 16);
+}
+header .search input {
+  border: none;
+  width: calc(150rem / 16);
+  transition: 0.3s;
+}
+header .search input:focus {
+  width: calc(200rem / 16);
+}
+header .search input:focus::placeholder {
+  opacity: 0;
+}
+header .search input::placeholder {
+  font-size: calc(14rem / 16);
+}
+header .search i {
+  color: var(--grey-color);
+}
+header img {
+  width: calc(32rem / 16);
+  height: calc(32rem / 16);
+}
+header .notification i {
+  font-size: calc(25rem / 16);
+}
+
+/* end header */
