@@ -20,6 +20,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   display: flex;
   background-color: #f1f5f9;
+  height: 200vh;
 }
 a {
   text-decoration: none;
@@ -32,6 +33,20 @@ ul {
 img,
 video {
   width: 100%;
+}
+body::-webkit-scrollbar {
+  width: calc(10rem / 16);
+}
+
+body::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--blue-color);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-alt-color);
 }
 /* end reset */
 
@@ -161,3 +176,33 @@ header .notification i::after {
 }
 
 /* end header */
+
+/* start main */
+main h1 {
+  font-size: clamp(calc(20rem / 16), 3vw, calc(35rem / 16));
+  width: fit-content;
+  margin: 0;
+}
+main h1::after,
+main h1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: calc(-8rem / 16);
+  height: calc(3rem / 16);
+}
+main h1::after {
+  width: 70%;
+  background-color: white;
+}
+main h1::before {
+  z-index: 1;
+  width: 30%;
+  background-color: black;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(calc(450rem / 16), 1fr));
+  gap: calc(15rem / 16);
+}
+/* end main */
