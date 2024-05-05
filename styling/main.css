@@ -114,11 +114,11 @@ aside li:hover,
 .content {
   flex: 1;
 }
-header {
-}
 header .search {
   border: 1px solid #ddd;
   padding: calc(7rem / 16) calc(10rem / 16);
+  display: flex;
+  align-items: center;
 }
 header .search input {
   border: none;
@@ -127,6 +127,11 @@ header .search input {
 }
 header .search input:focus {
   width: calc(200rem / 16);
+}
+@media (max-width: calc(449rem / 16)) {
+  header .search input:focus {
+    width: calc(150rem / 16);
+  }
 }
 header .search input:focus::placeholder {
   opacity: 0;
@@ -143,6 +148,16 @@ header img {
 }
 header .notification i {
   font-size: calc(25rem / 16);
+  position: relative;
+}
+header .notification i::after {
+  content: '';
+  position: absolute;
+
+  width: calc(7rem / 16);
+  height: calc(7rem / 16);
+  border-radius: 50%;
+  background-color: var(--red-color);
 }
 
 /* end header */
