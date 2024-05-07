@@ -110,6 +110,8 @@ aside li {
 }
 aside a {
   display: flex;
+  width: 100%;
+  margin: 0;
   align-items: center;
   gap: calc(10rem / 16);
 }
@@ -204,5 +206,47 @@ main h1::before {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(450rem / 16), 1fr));
   gap: calc(15rem / 16);
+  margin-top: calc(50rem / 16);
 }
 /* end main */
+
+/* start welcome */
+.welcome {
+  overflow: hidden;
+  padding-bottom: calc(20rem / 16);
+}
+.welcome figure {
+  margin: 0;
+}
+.welcome > div:first-of-type {
+  display: flex;
+  position: relative;
+}
+.welcome figure:first-of-type img {
+  width: calc(200rem / 16);
+}
+.welcome figure:last-of-type img {
+  width: calc(64rem / 16);
+  height: calc(64rem / 16);
+  position: absolute;
+  bottom: calc(-32rem / 16);
+  left: calc(20rem / 16);
+  border: 5px solid white;
+  border-radius: 50%;
+}
+.welcome .status {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin: calc(50rem / 16) 0 calc(25rem / 16);
+}
+.welcome .status span {
+  display: block;
+  margin-top: calc(10rem / 16);
+}
+a {
+  display: block;
+  width: fit-content;
+  margin: 0 calc(20rem / 16) 0 auto;
+  font-size: calc(14rem / 16);
+}
+/* end welcome */
